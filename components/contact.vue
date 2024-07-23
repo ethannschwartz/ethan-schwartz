@@ -3,7 +3,7 @@
     <div>
       <h5 data-aos="fade-up" class="type-secondary font-extrabold text-5xl">Let's chat</h5>
       <p :data-aos-delay="50" data-aos="fade-up" class="type-primary text-sm">
-        If you liked what you read and you think I could be of service, don't hesitate to reach out.
+        If you liked what you read and you think I could be of service, please don't hesitate to reach out.
       </p>
     </div>
 <!--    write me a contact me form  -->
