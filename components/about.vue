@@ -7,7 +7,7 @@
     <img
         data-aos="flip-right"
         data-aos-delay="200"
-        class="order-1 md:order-2 mx-auto md:p-0 max-w-xs rounded-full overflow-hidden"
+        class="order-1 md:order-2 mx-auto p-12 md:p-0 max-w-xs rounded-full overflow-hidden"
         :src="profileImage"
         alt="profile image"
     />
