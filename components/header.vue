@@ -12,7 +12,7 @@
         </div>
       </div>
     </div>
-    <div data-aos="fade-down" v-if="scrollPosition > 10" class="fixed top-0 left-0 right-0 py-14 md:py-8 flex items-center justify-center">
+    <div data-aos="fade-down" v-if="scrollPosition > 10" class="hidden fixed top-0 left-0 right-0 py-14 md:py-8 md:flex items-center justify-center">
       <a href="#" class="focus:opacity-0 focus:scale-50 duration-150 flex gap-1 items-center rounded-full bg-black dark:bg-white text-white dark:text-black py-1 px-5 text-sm">
         Scroll to top
         <i class="fi fi-rr-arrow-up flex items-center"></i>
