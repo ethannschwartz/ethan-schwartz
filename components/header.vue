@@ -12,6 +12,12 @@
         </div>
       </div>
     </div>
+    <div data-aos="fade-down" v-if="scrollPosition > 10" class="fixed top-0 left-0 right-0 py-8 flex items-center justify-center">
+      <a href="#" class="flex gap-1 items-center rounded-full bg-black dark:bg-white text-white dark:text-black py-1 px-5 text-sm">
+        Scroll to top
+        <i class="fi fi-rr-arrow-up flex items-center"></i>
+      </a>
+    </div>
     <div class="flex gap-4 items-center">
       <a
           href="/assets/files/Resume-Ethan-Schwartz.pdf"
@@ -106,6 +112,15 @@ const toggleDarkMode = () => {
 const toggleMobileMenu = () => {
   isMenuSeen.value = !isMenuSeen.value;
 }
+
+const scrollPosition = ref(0);
+
+onMounted(() => {
+  scrollPosition.value = scrollY;
+  window.addEventListener("scroll", (event) => {
+    scrollPosition.value = scrollY;
+  });
+});
 </script>
 
 <style scoped>

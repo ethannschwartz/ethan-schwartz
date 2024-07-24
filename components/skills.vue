@@ -1,15 +1,18 @@
 <template>
-  <article id="skills" class="scroll-mt-12 p-4 md:p-16 py-36 grid grid-cols-1 md:grid-cols-2">
-    <div class="mb-4" data-aos="fade-up" v-for="category in skillsArray">
-      <h5 class="mb-4 font-bold text-3xl type-secondary">{{ category.title }}</h5>
-      <ul>
-        <li data-aos="fade-up" class="flex items-center gap-2 type-primary" v-for="skill in category.skills">
-          <i class="fi fi-rr-check text-xs"></i>
-          {{ skill.name }}
-        </li>
-      </ul>
-    </div>
-  </article>
+  <section id="skills" class="scroll-mt-12 p-4 md:px-16 md:py-8">
+    <h4 data-aos="fade-up" class="font-bold type-secondary text-5xl my-8">Skills</h4>
+    <article class="grid grid-cols-1 md:grid-cols-2">
+      <div class="mb-4" data-aos="fade-up" v-for="category in skillsArray">
+        <h5 class="mb-4 font-bold text-3xl type-secondary">{{ category.title }}</h5>
+        <ul>
+          <li data-aos="fade-up" class="flex items-center gap-2 type-primary" v-for="skill in category.skills">
+            <i class="fi fi-rr-check text-xs"></i>
+            {{ skill.name }}
+          </li>
+        </ul>
+      </div>
+    </article>
+  </section>
 </template>
 
 <script setup>
@@ -35,9 +38,7 @@ const skillsArray = [
       { name: "Laravel", logo: "https://path-to-logo/laravel-logo.png" },
       { name: "Inertia.js", logo: "https://path-to-logo/inertia-logo.png" },
       { name: "Redux", logo: "https://path-to-logo/redux-logo.png" },
-      { name: "NgRx", logo: "https://path-to-logo/ngrx-logo.png" },
-      { name: "RxJS", logo: "https://path-to-logo/rxjs-logo.png" },
-      { name: "NgXs", logo: "https://path-to-logo/ngxs-logo.png" },
+      { name: "NgRx / NgXs / RxJS", logo: "https://path-to-logo/ngrx-logo.png" },
       { name: "TailwindCSS", logo: "https://path-to-logo/tailwindcss-logo.png" },
       { name: "Node.js", logo: "https://path-to-logo/nodejs-logo.png" }
     ]
@@ -54,7 +55,7 @@ const skillsArray = [
   {
     title: "Tools and Platforms",
     skills: [
-      { name: "Jira/Atlassian", logo: "https://path-to-logo/jira-logo.png" },
+      { name: "Jira / Atlassian", logo: "https://path-to-logo/jira-logo.png" },
       { name: "Figma", logo: "https://path-to-logo/figma-logo.png" },
       { name: "Cloudinary", logo: "https://path-to-logo/cloudinary-logo.png" },
       { name: "SEO", logo: "https://path-to-logo/seo-logo.png" },
@@ -69,13 +70,11 @@ const skillsArray = [
       { name: "MVC Architecture", logo: "https://path-to-logo/mvc-logo.png" },
       { name: "SPA", logo: "https://path-to-logo/spa-logo.png" },
       { name: "Agile Development", logo: "https://path-to-logo/agile-logo.png" },
-      { name: "Debounce", logo: "https://path-to-logo/debounce-logo.png" },
       { name: "Asynchronous functions", logo: "https://path-to-logo/async-logo.png" },
       { name: "UX/UI Design", logo: "https://path-to-logo/ux-ui-logo.png" },
       { name: "Real-time data fetching", logo: "https://path-to-logo/realtime-logo.png" },
       { name: "Performance optimization", logo: "https://path-to-logo/performance-logo.png" },
       { name: "Technical SEO", logo: "https://path-to-logo/technical-seo-logo.png" },
-      { name: "Schema implementation", logo: "https://path-to-logo/schema-logo.png" },
       { name: "Dynamic content handling", logo: "https://path-to-logo/dynamic-content-logo.png" }
     ]
   },
