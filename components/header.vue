@@ -12,7 +12,7 @@
         </div>
       </div>
     </div>
-    <div data-aos="fade-down" v-if="scrollPosition > 10" class="hidden fixed top-0 left-0 right-0 py-14 md:py-8 md:flex items-center justify-center">
+    <div data-aos="fade-down" v-if="scrollPosition > 10" class="hidden md:flex fixed top-0 left-0 right-0 h-40 items-center justify-center">
       <button
           @click="scrollToTop()"
           :class="isClicked ? 'opacity-0 scale-50' : ''"
