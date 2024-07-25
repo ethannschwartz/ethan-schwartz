@@ -10,7 +10,7 @@
 
 <script setup>
 useSeoMeta({
-  title: "Eitan Schwartz | Software Developer",
+  title: "Ethan Schwartz | Software Developer",
   description: "Full stack software developer living in Tel Aviv-Yafo. Experienced in Angular, Vue, React, Nuxt.js, Next.js, PHP, Laravel, SQL, and more.",
   keywords: "Software engineer, software developer, full stack developer, front end developer, vue developer, laravel developer, angular developer, experienced programmer, SEO specialist",
 });

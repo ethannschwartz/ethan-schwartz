@@ -10,14 +10,14 @@ export default defineNuxtConfig({
     },
   },
   site: {
-    url: "https://master.d2pnv63bvvqq5p.amplifyapp.com/",
+    url: "https://www.ethan-schwartz.com/",
   },
   app: {
     head: {
       meta: [
         {
           name: 'google-site-verification',
-          content: 'ypd0t9ZA4pKl38gtH5GAbitEWQRqHaNjpKgB1E7vlWc',
+          content: '2_y5E18D0HzFijy2j2g0OEVLR1K5mIAVl5MRUqioyvA',
         },
       ],
     },

@@ -3,7 +3,7 @@
     <div data-aos="fade" data-aos-delay="100" class="flex items-center">
       <div class="text-emerald-600 block items-center">
         <div class="!font-mono">
-          Eitan Schwartz
+          Ethan Schwartz
           <span class="flex items-center text-xs type-secondary font-mono">
             <UTooltip text="Call me" class="flex items-center">
               <a class="flex gap-1.5 items-center font-mono text-xs" href="tel:+972 053-324-4272">053-324-4272 <i class="fi fi-brands-whatsapp"></i></a>
