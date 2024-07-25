@@ -1,6 +1,6 @@
 <template>
   <header class="bg-zinc-tier-1/10 backdrop-blur z-40 flex items-center justify-between fixed top-0 left-0 right-0 py-4 px-4 md:py-6 md:px-16">
-    <div data-aos="fade" data-aos-delay="100" class="flex items-center">
+    <div data-aos="fade" data-aos-delay="100" class="z-10 flex items-center">
       <div class="text-emerald-600 block items-center">
         <div class="!font-mono">
           Ethan Schwartz
@@ -13,10 +13,14 @@
       </div>
     </div>
     <div data-aos="fade-down" v-if="scrollPosition > 10" class="hidden fixed top-0 left-0 right-0 py-14 md:py-8 md:flex items-center justify-center">
-      <a href="#" class="focus:opacity-0 focus:scale-50 duration-150 flex gap-1 items-center rounded-full bg-black dark:bg-white text-white dark:text-black py-1 px-5 text-sm">
+      <button
+          @click="scrollToTop()"
+          :class="isClicked ? 'opacity-0 scale-50' : ''"
+          class="duration-150 flex gap-1 items-center rounded-full bg-black dark:bg-white text-white dark:text-black py-1 px-5 text-sm"
+      >
         Scroll to top
         <i class="fi fi-rr-arrow-up flex items-center"></i>
-      </a>
+      </button>
     </div>
     <div class="flex gap-4 items-center">
       <a
@@ -114,6 +118,7 @@ const toggleMobileMenu = () => {
 }
 
 const scrollPosition = ref(0);
+const isClicked = ref(false);
 
 onMounted(() => {
   scrollPosition.value = scrollY;
@@ -121,6 +126,14 @@ onMounted(() => {
     scrollPosition.value = scrollY;
   });
 });
+
+const scrollToTop = () => {
+  isClicked.value = true;
+  window.scrollTo(0,0);
+  setTimeout(() => {
+    isClicked.value = false;
+  },1000);
+}
 </script>
 
 <style scoped>
