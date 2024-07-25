@@ -1,4 +1,4 @@
-# Ethan's Nuxt 3 Resume Template
+# Ethan's Nuxt 3 Portfolio
 
 This is my personal website. Please feel free to use it as your own template.
 
