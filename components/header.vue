@@ -24,7 +24,7 @@
     </div>
     <div class="flex gap-4 items-center">
       <a
-          href="/assets/files/Resume-Ethan-Schwartz.pdf"
+          href="/assets/files/ethan-schwartz-resume.pdf"
           class="text-xs font-mono flex md:hidden items-center gap-1 border border-black dark:border-white bg-transparent text-black hover:bg-black hover:text-white dark:text-white dark:hover:bg-white dark:hover:text-black rounded-full px-4 py-1"
       >
         <i class="fi fi-rr-resume"></i>
@@ -58,7 +58,7 @@
         <UTooltip text="Check out my resume" :open-delay="500" class="flex items-center">
           <a
               target="_blank"
-              href="/assets/files/Resume-Ethan-Schwartz.pdf"
+              href="/assets/files/ethan-schwartz-resume.pdf"
               class="text-xs font-mono hidden md:flex items-center gap-1 border border-black dark:border-white bg-transparent text-black hover:bg-black hover:text-white dark:text-white dark:hover:bg-white dark:hover:text-black rounded-full px-4 py-1"
           >
             <i class="fi fi-rr-resume"></i>
