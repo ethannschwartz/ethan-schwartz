@@ -15,6 +15,6 @@
 </template>
 
 <script setup>
-const profileImage = 'https://media.licdn.com/dms/image/D4D03AQGD1EAU8MBV-Q/profile-displayphoto-shrink_800_800/0/1685896661231?e=1726704000&v=beta&t=KUw90jXFLXZxC9twpfai-c19DAGua5FtdEguOVmK8HQ';
+const profileImage = 'https://media.licdn.com/dms/image/D4D03AQHWvWB5AuYzHw/profile-displayphoto-shrink_800_800/0/1723111948384?e=1728518400&v=beta&t=aJaog02H0p00TAjPoIdxEYLdqQUE-mDbo_Mq-VULl6o';
 
 </script>
