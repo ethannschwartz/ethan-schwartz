@@ -35,11 +35,12 @@ const skillsArray = [
     skills: [
       { name: "Vue.js", logo: "fi fi-rr-check" },
       { name: "Nuxt.js", logo: "fi fi-rr-check" },
+      { name: "Next.js", logo: "fi fi-rr-check" },
+      { name: "React", logo: "fi fi-rr-check" },
       { name: "Angular", logo: "fi fi-rr-check" },
       { name: "Laravel", logo: "fi fi-rr-check" },
       { name: "Inertia.js", logo: "fi fi-rr-check" },
-      { name: "Redux", logo: "fi fi-rr-check" },
-      { name: "NgRx / NgXs / RxJS", logo: "fi fi-rr-check" },
+      { name: "Redux / NgRx / NgXs / RxJS", logo: "fi fi-rr-check" },
       { name: "TailwindCSS", logo: "fi fi-rr-check" },
       { name: "Node.js", logo: "fi fi-brands-node-js" }
     ]
@@ -77,7 +78,8 @@ const skillsArray = [
       { name: "Real-time data fetching", logo: "fi fi-rr-check" },
       { name: "Performance optimization", logo: "fi fi-rr-check" },
       { name: "Technical SEO", logo: "fi fi-rr-check.png" },
-      { name: "Dynamic content handling", logo: "fi fi-rr-check" }
+      { name: "Dynamic content handling", logo: "fi fi-rr-check" },
+      { name: "Web Scraping", logo: "fi fi-rr-check" },
     ]
   },
   {
