@@ -38,7 +38,7 @@ const displayedText = ref('');
 const cursorVisible = ref(true);
 const imageVisible = ref(false);
 const baseText = "git clone https://github.com/ethannschwartz/";
-const variations = ["nuxt-template.git", "next-template.git", "ethan-schwartz.git"];
+const variations = ["nuxt-template.git", "next.js-template.git", "ethan-schwartz.git"];
 
 const images = [
   nextImage,
