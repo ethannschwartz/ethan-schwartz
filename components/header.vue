@@ -96,14 +96,13 @@
 </template>
 
 <script setup>
-import {useState} from "#app";
-
 let isDarkMode = useState('isDarkMode', () => false);
 
 const sections = [
     "about",
     "skills",
     "experience",
+    "open-source",
     "contact",
 ];
 
