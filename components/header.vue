@@ -62,7 +62,7 @@
               class="text-xs font-mono hidden md:flex items-center gap-1 border border-black dark:border-white bg-transparent text-black hover:bg-black hover:text-white dark:text-white dark:hover:bg-white dark:hover:text-black rounded-full px-4 py-1"
           >
             <i class="fi fi-rr-resume"></i>
-            <span class="hidden lg:block">resume</span>
+            <span class="font-mono hidden lg:block">resume</span>
           </a>
         </UTooltip>
       </li>
