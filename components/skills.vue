@@ -1,5 +1,5 @@
 <template>
-  <section id="skills" class="scroll-mt-12 p-4 md:px-16 md:py-8">
+  <section id="skills" class="scroll-mt-12 px-4 py-16 md:p-16">
     <h4 data-aos="fade-up" class="font-bold type-secondary text-5xl my-8">Skills</h4>
     <article class="grid grid-cols-1 md:grid-cols-2">
       <div class="mb-4" data-aos="fade-up" v-for="category in skillsArray">

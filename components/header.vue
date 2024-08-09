@@ -12,7 +12,7 @@
         </div>
       </div>
     </div>
-    <div data-aos="fade-down" v-if="scrollPosition > 10" class="hidden md:flex fixed top-0 left-0 right-0 h-40 items-center justify-center">
+    <div data-aos="fade-down" v-if="scrollPosition > 10" class="hidden md:flex fixed top-0 left-0 right-0 h-fit my-20 items-center justify-center">
       <button
           @click="scrollToTop()"
           :class="isClicked ? 'opacity-0 scale-50' : ''"
@@ -37,11 +37,11 @@
     <ul class="hidden md:flex items-center gap-4">
       <li data-aos="fade-down" class="type-primary hover:text-emerald-600 dark:hover:text-emerald-400">
         <UTooltip
-            :text="`Turn dark mode ${isDarkMode ? 'off' : 'on'}`"
+            :text="`Turn dark mode ${isDark ? 'off' : 'on'}`"
             class="flex items-center"
         >
           <button @click="toggleDarkMode()" class="flex items-center">
-            <i v-if="isDarkMode" class="fi fi-rr-sun"></i>
+            <i v-if="isDark" class="fi fi-rr-sun"></i>
             <i v-else class="fi fi-rr-moon"></i>
           </button>
         </UTooltip>
@@ -52,7 +52,7 @@
           data-aos="fade-down"
           :data-aos-delay="100 + (i * 50)"
       >
-        <a :href="'#'+section">{{ section }}</a>
+        <a :href="'#'+section" class="font-mono text-sm">{{ section }}</a>
       </li>
       <li data-aos="fade-down" :data-aos-delay="100 + (sections.length * 50)">
         <UTooltip text="Check out my resume" :open-delay="500" class="flex items-center">
@@ -62,7 +62,7 @@
               class="text-xs font-mono hidden md:flex items-center gap-1 border border-black dark:border-white bg-transparent text-black hover:bg-black hover:text-white dark:text-white dark:hover:bg-white dark:hover:text-black rounded-full px-4 py-1"
           >
             <i class="fi fi-rr-resume"></i>
-            resume
+            <span class="hidden lg:block">resume</span>
           </a>
         </UTooltip>
       </li>
@@ -96,7 +96,20 @@
 </template>
 
 <script setup>
-let isDarkMode = useState('isDarkMode', () => false);
+//dark mode
+const colorMode = useColorMode()
+const isDark = computed({
+  get () {
+    return colorMode.value === 'dark';
+  },
+  set () {
+    colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark';
+  }
+})
+
+const toggleDarkMode = () => {
+  isDark.value = !isDark.value;
+}
 
 const sections = [
     "about",
@@ -107,10 +120,6 @@ const sections = [
 ];
 
 const isMenuSeen = ref(false);
-
-const toggleDarkMode = () => {
-  isDarkMode.value = !isDarkMode.value;
-}
 
 const toggleMobileMenu = () => {
   isMenuSeen.value = !isMenuSeen.value;

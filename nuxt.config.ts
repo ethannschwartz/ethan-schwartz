@@ -22,5 +22,5 @@ export default defineNuxtConfig({
       ],
     },
   },
-  modules: ["nuxt-aos", "vue3-carousel-nuxt", "@nuxtjs/sitemap", "@nuxt/ui"],
+  modules: ["nuxt-aos", "vue3-carousel-nuxt", "@nuxtjs/sitemap", "@nuxt/ui", "@nuxtjs/color-mode"],
 })

@@ -1,5 +1,5 @@
 <template>
-  <section id="experience" class="scroll-mt-12 h-auto p-4 md:p-16">
+  <section id="experience" class="scroll-mt-12 h-auto px-4 py-16 md:p-16">
     <h4 data-aos="fade-up" class="font-bold type-secondary text-5xl my-8">Experience</h4>
     <ul class="gap-24 md:gap-64 grid grid-cols-1">
       <li v-for="(experience, i) in experiences" class="gap-16 grid grid-cols-1 md:grid-cols-2">
@@ -14,7 +14,7 @@
                   class="flex items-center"
                   :text="`Visit ${experience.title}`"
                   :popper="{
-                    placement: 'right',
+                    placement: 'right'
                   }"
               >
                 <a :href="experience.link" class="text-3xl group-hover:underline underline-offset-4">{{ experience.title }}</a>
