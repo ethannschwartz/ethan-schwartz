@@ -15,7 +15,7 @@
         </button>
       </UTooltip>
     </div>
-    <div id="image" class="h-[500px] duration-100 max-w-3xl mx-auto text-center mt-12">
+    <div id="image" class="h-[500px] duration-150 max-w-3xl mx-auto text-center mt-12">
       <img
           v-if="imageVisible"
           :src="currentImage"
@@ -99,20 +99,20 @@ function backspaceText(callback) {
       clearInterval(backspaceInterval);
       callback();
     }
-  }, 50);
+  }, 20);
 }
 
 function cycleVariations() {
   backspaceText(() => {
     typeText(baseText + variations[variationIndex], () => {
       currentImage.value = images[variationIndex]; // Change the image based on the variation
+      imageVisible.value = true; // Show image after each variation is typed
+      variationIndex = (variationIndex + 1) % variations.length;
       let imageElement = document.getElementById("image");
       imageElement.classList.add('scale-95');
       setTimeout(() => {
         imageElement.classList.remove('scale-95');
-      }, 50)
-      imageVisible.value = true; // Show image after each variation is typed
-      variationIndex = (variationIndex + 1) % variations.length;
+      }, 100)
       setTimeout(cycleVariations, 5000); // Delay before the next cycle
     });
   });
