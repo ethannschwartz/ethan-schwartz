@@ -22,7 +22,7 @@
           data-aos="zoom-out"
           data-aos-delay="200"
           alt="Description of the image"
-          class="shadow-2xl shadow-teal-200/25 dark:shadow-teal-200/50 h-full max-w-full mx-auto rounded-2xl overflow-hidden"
+          class="shadow-2xl shadow-teal-200/25 dark:shadow-teal-200/50 w-full max-w-full mx-auto rounded-2xl overflow-hidden"
       />
     </div>
   </section>
