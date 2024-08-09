@@ -1,5 +1,5 @@
 <template>
-  <section ref="open-source" id="open-source" class="type-primary mt-16 scroll-mt-16 md:scroll-mt-4w-screen h-auto p-4 md:p-16">
+  <section ref="open-source" id="open-source" class="type-primary mt-20 scroll-mt-20 md:scroll-mt-4w-screen h-auto p-4 md:p-16">
     <div class="flex w-full items-center justify-start md:justify-center text-center">
       <i class="fi fi-brands-github text-6xl"></i>
     </div>
@@ -15,14 +15,14 @@
         </button>
       </UTooltip>
     </div>
-    <div class="max-w-3xl mx-auto text-center mt-12">
+    <div id="image" class="h-[500px] duration-100 max-w-3xl mx-auto text-center mt-12">
       <img
           v-if="imageVisible"
           :src="currentImage"
           data-aos="zoom-out"
           data-aos-delay="200"
           alt="Description of the image"
-          class="h-full max-w-full mx-auto rounded-2xl overflow-hidden"
+          class="shadow-2xl shadow-teal-200/25 dark:shadow-teal-200/50 h-full max-w-full mx-auto rounded-2xl overflow-hidden"
       />
     </div>
   </section>
@@ -106,6 +106,11 @@ function cycleVariations() {
   backspaceText(() => {
     typeText(baseText + variations[variationIndex], () => {
       currentImage.value = images[variationIndex]; // Change the image based on the variation
+      let imageElement = document.getElementById("image");
+      imageElement.classList.add('scale-95');
+      setTimeout(() => {
+        imageElement.classList.remove('scale-95');
+      }, 50)
       imageVisible.value = true; // Show image after each variation is typed
       variationIndex = (variationIndex + 1) % variations.length;
       setTimeout(cycleVariations, 5000); // Delay before the next cycle
