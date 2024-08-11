@@ -1,12 +1,12 @@
 <template>
-  <section ref="open-source" id="open-source" class="type-primary mt-20 scroll-mt-40 md:scroll-mt-4 w-screen h-auto p-4 md:p-16 !pt-36">
+  <section ref="open-source" id="open-source" class="type-primary mt-20 scroll-mt-4 md:scroll-mt-4 w-screen h-auto p-4 md:p-16 !pt-36">
     <div class="flex w-full items-center justify-start md:justify-center text-center">
       <i class="fi fi-brands-github text-6xl"></i>
     </div>
     <h4 data-aos="fade-right" class="text-left md:text-center font-bold type-secondary text-5xl my-8">Open Source Development</h4>
     <p data-aos="fade-right" data-aos-delay="50" class="text-xl font-extralight text-left md:text-center mb-8">As an open source developer, I am constantly expanding and refining my skillset. My projects have played a crucial role in enhancing my expertise and contributing to the broader tech community.</p>
-    <div class="text-base flex items-center justify-between max-w-3xl mx-auto rounded-md bg-black text-white p-4">
-      <div>
+    <div class="text-base flex items-center justify-between max-w-full md:max-w-3xl mx-auto rounded-md bg-black text-white p-4">
+      <div class="w-full overflow-hidden">
         <span class="font-mono"><span class="text-yellow-600">$</span> {{ displayedText }}</span><span class="font-mono" v-if="cursorVisible">|</span>
       </div>
       <UTooltip :popper="{ placement: 'right' }" :text="iconClass === 'fi fi-rr-check text-green-500' ? 'Copied!' :'Copy to clipboard'">
