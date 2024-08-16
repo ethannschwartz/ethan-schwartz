@@ -54,7 +54,9 @@ import seclockImage4 from "../assets/images/seclock/img_3.png";
 import semestrImage4 from "assets/images/semestr/img_3.png";
 import semestrImage2 from "../assets/images/semestr/img_1.png";
 import semestrImage3 from "../assets/images/semestr/img_2.png";
-import semestrImage1 from "assets/images/semestr/img.png";
+import newSemestrLanding from "assets/images/semestr/img_5.png";
+import newSemestrPage from "assets/images/semestr/img_4.png";
+
 
 const seclockImages = [
   seclockImage1,
@@ -64,7 +66,8 @@ const seclockImages = [
 ];
 
 const semestrImages = [
-  semestrImage1,
+  newSemestrLanding,
+  newSemestrPage,
   semestrImage2,
   semestrImage3,
   semestrImage4,
