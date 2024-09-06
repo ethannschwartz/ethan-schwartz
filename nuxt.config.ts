@@ -20,6 +20,9 @@ export default defineNuxtConfig({
           content: '2_y5E18D0HzFijy2j2g0OEVLR1K5mIAVl5MRUqioyvA',
         },
       ],
+      link: [
+        { rel: 'canonical', href: 'https://www.ethan-schwartz.com' }
+      ]
     },
   },
   modules: ["nuxt-aos", "vue3-carousel-nuxt", "@nuxtjs/sitemap", "@nuxt/ui", "@nuxtjs/color-mode"],
