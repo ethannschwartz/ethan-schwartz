@@ -5,7 +5,7 @@
     </div>
     <h4 data-aos="fade-right" class="text-left md:text-center font-bold type-secondary text-5xl my-8">Open Source Development</h4>
     <p data-aos="fade-right" data-aos-delay="50" class="text-xl font-extralight text-left md:text-center mb-8">As an open source developer, I am constantly expanding and refining my skillset. My projects have played a crucial role in enhancing my expertise and contributing to the broader tech community.</p>
-    <div class="text-base flex items-center justify-between max-w-full md:max-w-3xl mx-auto rounded-md bg-black text-white p-4">
+    <div class="text-base flex items-start lg:items-center h-28 sm:h-20 lg:h-auto justify-between max-w-full md:max-w-3xl mx-auto rounded-md bg-black text-white p-4">
       <div class="w-full overflow-hidden">
         <span class="font-mono"><span class="text-yellow-600">$</span> {{ displayedText }}</span><span class="font-mono" v-if="cursorVisible">|</span>
       </div>
