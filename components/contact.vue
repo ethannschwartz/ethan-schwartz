@@ -8,20 +8,50 @@
         </p>
       </div>
       <form
-          action="https://formspree.io/f/mldrgrnb"
-          method="POST"
+          id="contact-form"
           class="type-primary flex flex-col gap-6 max-w-md w-full"
       >
-        <UInput v-model="form.name" :ui="{background: 'zinc'}" icon="i-heroicons-user" size="lg" color="gray" placeholder="Name" name="name" type="text" />
-        <UInput v-model="form.email" :ui="{background: 'zinc'}" icon="i-heroicons-at-symbol" size="lg" color="gray" placeholder="Email" name="email" type="email" />
-        <UTextarea v-model="form.message" :ui="{background: 'zinc'}" icon="i-heroicons-at-symbol" size="lg" color="gray" rows="6" placeholder="Message" name="message" />
+        <UInput
+            v-model="form.name"
+            :ui="{ background: 'zinc' }"
+            :disabled="isLoading"
+            icon="i-heroicons-user"
+            size="lg"
+            color="gray"
+            placeholder="Name"
+            name="name"
+            type="text"
+        />
+        <UInput
+            v-model="form.email"
+            :ui="{ background: 'zinc' }"
+            :disabled="isLoading"
+            icon="i-heroicons-at-symbol"
+            size="lg"
+            color="gray"
+            placeholder="Email"
+            name="email"
+            type="email"
+        />
+        <UTextarea
+            v-model="form.message"
+            :ui="{ background: 'zinc' }"
+            :disabled="isLoading"
+            icon="i-heroicons-at-symbol"
+            size="lg"
+            color="gray"
+            rows="6"
+            placeholder="Message"
+            name="message"
+        />
         <button
-            @click="submitForm"
-            :disabled="!(form.name && form.email && form.message)"
+            :disabled="!(form.name && form.email && form.message) || isLoading"
             class="btn-primary"
-            type="submit"
+            type="button"
+            @click="submitForm"
         >
-          Submit
+          <span v-if="isLoading">Submitting...</span>
+          <span v-else>Submit</span>
         </button>
       </form>
     </div>
@@ -30,14 +60,42 @@
 
 <script setup>
 const form = reactive({
-  name: "",
-  email: "",
-  message: "",
+  name: '',
+  email: '',
+  message: '',
 });
 
-function submitForm () {
-  form.name = '';
-  form.email = '';
-  form.message = '';
+const isLoading = ref(false);
+
+async function submitForm() {
+  isLoading.value = true;
+
+  try {
+    const formData = new FormData();
+    formData.append('name', form.name);
+    formData.append('email', form.email);
+    formData.append('message', form.message);
+
+    const response = await fetch('https://formspree.io/f/mldrgrnb', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+      },
+      body: formData,
+    });
+
+    if (response.ok) {
+      form.name = '';
+      form.email = '';
+      form.message = '';
+    } else {
+      const data = await response.json();
+      console.error('Error:', data);
+    }
+  } catch (error) {
+    console.error('Error:', error);
+  } finally {
+    isLoading.value = false;
+  }
 }
 </script>
