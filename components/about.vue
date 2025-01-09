@@ -15,6 +15,5 @@
 </template>
 
 <script setup>
-// const profileImage = 'assets/images/profile-image/PHOTO-2024-08-08-13-11-12.jpg';
 
 </script>
