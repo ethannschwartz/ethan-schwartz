@@ -7,14 +7,14 @@
     <img
         data-aos="flip-right"
         data-aos-delay="200"
-        class="order-1 md:order-2 mx-auto p-12 md:p-0 max-w-xs rounded-full overflow-hidden"
-        :src="profileImage"
+        class="order-1 md:order-2 mx-auto w-72 h-72 object-cover object-top max-w-xs rounded-full overflow-hidden"
+        src="../assets/images/profile-image/PHOTO-2024-08-08-13-11-12.jpg"
         alt="profile image"
     />
   </section>
 </template>
 
 <script setup>
-const profileImage = 'https://media.licdn.com/dms/image/D4D03AQHWvWB5AuYzHw/profile-displayphoto-shrink_800_800/0/1723111948384?e=1728518400&v=beta&t=aJaog02H0p00TAjPoIdxEYLdqQUE-mDbo_Mq-VULl6o';
+// const profileImage = 'assets/images/profile-image/PHOTO-2024-08-08-13-11-12.jpg';
 
 </script>
