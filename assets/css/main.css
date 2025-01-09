@@ -51,9 +51,9 @@
 }
 
 .btn-primary {
-    @apply font-mono rounded-full p-2 border bg-white border-black hover:bg-black hover:text-white disabled:opacity-50 disabled:pointer-events-none;
+    @apply font-mono rounded-full p-2 border border-black bg-black hover:bg-zinc-800 text-white disabled:opacity-50 disabled:pointer-events-none;
 }
 
 .dark .btn-primary {
-    @apply text-white bg-transparent border-white hover:bg-white hover:text-black;
+    @apply bg-white hover:bg-zinc-100 border-white text-black;
 }

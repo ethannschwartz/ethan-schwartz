@@ -6,6 +6,8 @@
     <Experience />
     <OpenSource />
     <Contact />
+<!--    for toasts-->
+    <UNotifications />
   </section>
 </template>
 

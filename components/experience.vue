@@ -100,7 +100,7 @@ const experiences = [
     title: "Semestr",
     link: "https://semestr.io",
     images: semestrImages,
-    description: "Full stack developer  •  Team Lead  •  Founder & CEO",
+    description: "Full stack developer  •  Team Lead  •  Founder",
     achievements: [
       "Angular",
       "TailwindCSS",
@@ -111,7 +111,6 @@ const experiences = [
       "RxJS",
       "NgRx/NgXs Store",
       "AWS",
-      "IONIC Framework",
       "OpenAI GPT",
       "SEO",
       "HTML5",
