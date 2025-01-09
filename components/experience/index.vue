@@ -1,6 +1,6 @@
 <template>
   <section id="experience" class="scroll-mt-12 h-auto px-4 py-16 md:p-16">
-    <h4 data-aos="fade-up" class="font-bold type-secondary text-5xl my-8">Experience</h4>
+    <h4 data-aos="fade-up" class="font-bold type-secondary text-5xl my-8">{{ $t('Experience') }}</h4>
     <ul class="gap-24 md:gap-64 grid grid-cols-1">
       <li v-for="(experience, i) in experiences" class="gap-16 grid grid-cols-1 md:grid-cols-2">
         <div
@@ -12,15 +12,15 @@
             <h5 class="w-fit font-bold type-primary group flex items-center gap-2">
               <UTooltip
                   class="flex items-center"
-                  :text="`Visit ${experience.title}`"
+                  :text="`${$t('Visit')} ${experience.title}`"
                   :popper="{
                     placement: 'right'
                   }"
               >
-                <a :href="experience.link" class="text-3xl group-hover:underline underline-offset-4">{{ experience.title }}</a>
+                <a :href="experience.link" class="text-3xl group-hover:underline underline-offset-4">{{ $t(experience.title) }}</a>
               </UTooltip>
             </h5>
-            <p class="type-secondary text-sm">{{ experience.description }}</p>
+            <p class="type-secondary text-sm">{{ $t(experience.description) }}</p>
           </div>
           <div data-aos="fade-up">
             <ul class="grid grid-cols-1 lg:grid-cols-2">
@@ -29,7 +29,7 @@
                   class="type-primary"
                   v-for="item in experience.achievements"
               >
-                {{ item }}
+                {{ $t(item) }}
               </li>
             </ul>
           </div>
@@ -48,12 +48,12 @@
 
 <script setup>
 import seclockImage3 from "assets/images/seclock/img_2.png";
-import seclockImage2 from "../assets/images/seclock/img_1.png";
+import seclockImage2 from "assets/images/seclock/img_1.png";
 import seclockImage1 from "assets/images/seclock/img.png";
-import seclockImage4 from "../assets/images/seclock/img_3.png";
+import seclockImage4 from "assets/images/seclock/img_3.png";
 import semestrImage4 from "assets/images/semestr/img_3.png";
-import semestrImage2 from "../assets/images/semestr/img_1.png";
-import semestrImage3 from "../assets/images/semestr/img_2.png";
+import semestrImage2 from "assets/images/semestr/img_1.png";
+import semestrImage3 from "assets/images/semestr/img_2.png";
 import newSemestrLanding from "assets/images/semestr/img_5.png";
 import newSemestrPage from "assets/images/semestr/img_4.png";
 

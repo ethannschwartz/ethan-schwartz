@@ -2,9 +2,9 @@
   <section id="contact" class="h-screen flex items-center">
     <div class="mb-36 md:mb-0 grid md:grid-cols-2 w-full px-4 py-16 md:p-16 gap-16">
       <div>
-        <h5 data-aos="fade-up" class="type-secondary font-extrabold text-5xl">Let's chat</h5>
+        <h5 data-aos="fade-up" class="type-secondary font-extrabold text-5xl">{{ $t('Let\'s chat') }}</h5>
         <p :data-aos-delay="50" data-aos="fade-up" class="type-primary text-sm">
-          If you liked what you read and you think I could be of service, please don't hesitate to reach out.
+          {{ $t("If you liked what you read and you think I could be of service, please don't hesitate to reach out.") }}
         </p>
       </div>
       <form
@@ -18,7 +18,7 @@
             icon="i-heroicons-user"
             size="lg"
             color="gray"
-            placeholder="Name"
+            :placeholder="$t('Name')"
             name="name"
             type="text"
             pattern="[A-Za-z]{1,100}"
@@ -31,7 +31,7 @@
             icon="i-heroicons-at-symbol"
             size="lg"
             color="gray"
-            placeholder="Email"
+            :placeholder="$t('Email')"
             name="email"
             type="email"
             required
@@ -44,7 +44,7 @@
             size="lg"
             color="gray"
             rows="6"
-            placeholder="Message"
+            :placeholder="$t('Message')"
             name="message"
             required
         />
@@ -62,7 +62,7 @@
             <span key="a" v-if="isLoading" class="w-full flex justify-center items-center">
               <LoadingSpinner class="dark:invert" />
             </span>
-            <span key="b" v-else class="w-full flex justify-center items-center">Submit</span>
+            <span key="b" v-else class="w-full flex justify-center items-center">{{ $t('Submit') }}</span>
           </TransitionGroup>
         </button>
       </form>

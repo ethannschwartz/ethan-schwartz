@@ -1,14 +1,14 @@
 <template>
   <section id="skills" class="scroll-mt-12 px-4 py-16 md:p-16">
-    <h4 data-aos="fade-up" class="font-bold type-secondary text-5xl my-8">Skills</h4>
+    <h4 data-aos="fade-up" class="font-bold type-secondary text-5xl my-8">{{ $t('Skills') }}</h4>
     <article class="grid grid-cols-1 md:grid-cols-2">
       <div class="mb-4" data-aos="fade-up" v-for="category in skillsArray">
-        <h5 class="mb-4 font-bold text-3xl type-secondary">{{ category.title }}</h5>
+        <h5 class="mb-4 font-bold text-3xl type-secondary">{{ $t(category.title) }}</h5>
         <ul>
           <li data-aos="fade-up" class="flex items-center gap-2 type-primary" v-for="skill in category.skills">
             <!--            <i class="text-base" :class="skill.logo"></i>-->
                         <i class="text-sm fi fi-rr-check"></i>
-            {{ skill.name }}
+            {{ $t(skill.name) }}
           </li>
         </ul>
       </div>

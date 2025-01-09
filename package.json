@@ -12,10 +12,12 @@
   "dependencies": {
     "@flaticon/flaticon-uicons": "^3.3.1",
     "@nuxt/ui": "^2.18.4",
+    "@nuxtjs/i18n": "^9.1.1",
     "@nuxtjs/sitemap": "^5.3.5",
     "nuxt": "^3.12.3",
     "nuxt-aos": "^1.2.5",
     "vue": "latest",
+    "vue-i18n": "^11.0.1",
     "vue3-carousel-nuxt": "^1.1.2"
   },
   "devDependencies": {

@@ -1,5 +1,9 @@
 <template>
-  <section class="bg-zinc-tier-1">
+  <section
+      :dir="locale === 'he' ? 'rtl' : 'ltr'"
+      :class="locale !== 'he' ? '!text-left' : '!text-right'"
+      class="bg-zinc-tier-1"
+  >
     <Hero />
     <About />
     <Skills />
@@ -12,6 +16,8 @@
 </template>
 
 <script setup>
+const { locale } = useI18n();
+
 useSeoMeta({
   title: "Ethan Schwartz | Software Developer",
   description: "Full stack software developer living in Tel Aviv-Yafo. Experienced in Angular, Vue, React, Nuxt.js, Next.js, PHP, Laravel, SQL, and more.",

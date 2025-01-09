@@ -2,7 +2,7 @@
   <footer class="fixed bottom-0 left-0 right-0 type-primary flex items-center justify-between p-4 md:px-16">
     <span class="block w-fit px-6 py-2 my-8 border border-black dark:border-white rounded-full">
       <UTooltip
-          text="Email me"
+          :text="$t('Email me')"
           class="flex items-center"
           :popper="{
             placement: 'top',
