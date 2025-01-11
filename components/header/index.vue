@@ -54,11 +54,15 @@
       </li>
       <li
           v-for="(section, i) in sections"
-          class="type-primary hover:text-emerald-600 dark:hover:text-emerald-400"
+          class="group type-primary"
           data-aos="fade-down"
           :data-aos-delay="100 + (i * 50)"
       >
         <a :href="'#'+section" class="font-mono text-sm">{{ $t(section) }}</a>
+        <hr
+            class="mx-auto opacity-0 group-hover:opacity-100 w-0 group-hover:w-full duration-150 border-black dark:border-white"
+            :class="{ 'opacity-100 w-full': activeLink === section }"
+        />
       </li>
       <li data-aos="fade-down" :data-aos-delay="100 + (sections.length * 50)">
         <UTooltip :text="$t('Check out my resume')" :open-delay="500" class="flex items-center">
@@ -133,6 +137,7 @@ const toggleMobileMenu = () => {
 
 const scrollPosition = ref(0);
 const isClicked = ref(false);
+const activeLink = useState('activeLink');
 
 onMounted(() => {
   scrollPosition.value = scrollY;
