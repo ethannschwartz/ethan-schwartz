@@ -1,5 +1,5 @@
 <template>
-  <section ref="open-source" id="open-source" class="type-primary mt-20 scroll-mt-4 md:scroll-mt-4 w-screen h-auto p-4 md:p-16 !pt-36">
+  <section ref="open-source" id="open-source" class="overflow-hidden type-primary mt-20 scroll-mt-4 md:scroll-mt-4 w-screen h-auto p-4 md:p-16 !pt-36">
     <div class="flex w-full items-center justify-start md:justify-center text-center">
       <i class="fi fi-brands-github text-6xl"></i>
     </div>

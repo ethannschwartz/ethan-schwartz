@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-zinc-tier-1 backdrop-blur-sm z-40 flex items-center justify-between fixed top-0 left-0 right-0 py-4 px-4 md:py-6 md:px-16">
+  <header class="bg-white/60 dark:bg-zinc-900/70 backdrop-blur z-40 flex items-center justify-between fixed top-0 left-0 right-0 py-4 px-4 md:py-6 md:px-16">
     <div data-aos="fade" data-aos-delay="100" class="z-10 flex items-center">
       <div class="text-emerald-600 block items-center">
         <div class="!font-mono">
